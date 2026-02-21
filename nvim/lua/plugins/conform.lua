@@ -1,12 +1,6 @@
 return {
   "stevearc/conform.nvim",
   event = { "BufNewFile", "BufReadPre" },
-  dependencies = {
-    {
-      "williamboman/mason.nvim",
-      opts = {},
-    },
-  },
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
@@ -15,6 +9,7 @@ return {
       json = { "prettier" },
       jsonc = { "prettier" },
       javascript = { "prettier" },
+      typescript = { "prettier" },
       typescriptreact = { "prettier" },
     },
     formatters = {

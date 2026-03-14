@@ -4,15 +4,14 @@ max-visible=3
 default-timeout=2500
 
 layer=overlay
-anchor=top-center
 font=FiraCode Nerd Font Propo 10
 
 width=500
-padding=12,0
-margin=12,0,0
+padding=8,0
+margin=12,12,0,0
 
 border-size=0
-border-radius=12
+border-radius=8
 max-icon-size=48
 
 text-color=#d8cab8

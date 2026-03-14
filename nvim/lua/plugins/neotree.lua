@@ -9,7 +9,7 @@ return {
   opts = {
     window = {
       position = "right",
-      width = "15%",
+      width = "30",
     },
     enable_git_status = true,
     filesystem = {

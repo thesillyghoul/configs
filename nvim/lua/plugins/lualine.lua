@@ -11,7 +11,7 @@ return {
       always_divide_middle = true,
     },
     sections = {
-      lualine_a = { { "mode", icon = "" } },
+      lualine_a = { { "mode", icon = "" } },
       lualine_b = { "branch" },
       lualine_c = { { "filename", file_status = true, path = 0 } },
       lualine_x = {

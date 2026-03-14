@@ -1,0 +1,36 @@
+* {
+  border: none;
+  color: #d8cab8;
+  background: transparent;
+  font-family: "FiraCode Nerd Font Propo", sans-serif;
+  font-feature-settings: "zero";
+}
+
+#waybar > box {
+  padding: 4px 12px 0;
+}
+
+#workspaces {
+  margin: 0 16px;
+}
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#window {
+  margin-right: 24px;
+}
+
+#battery.charging {
+  color: #00ca00;
+}
+
+#battery.warning:not(.charging) {
+  color: #d8332e;
+}
+
+#battery.critical:not(.charging) {
+  color: #d80000;
+}

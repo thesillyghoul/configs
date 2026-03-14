@@ -1,0 +1,11 @@
+{
+  "group/center": {
+    "orientation": "horizontal",
+    "modules": ["clock"]
+  },
+
+  "clock": {
+    "format": "{:%a, %b.%d %I:%M %p}",
+    "tooltip": false
+  }
+}

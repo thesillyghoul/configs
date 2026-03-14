@@ -1,0 +1,6 @@
+{
+  "modules-left": ["group/left"],
+  "modules-center": ["group/center"],
+  "modules-right": ["group/right"],
+  "include": ["./modules/left", "./modules/center", "./modules/right"]
+}

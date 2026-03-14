@@ -1,0 +1,46 @@
+{
+  "group/left": {
+    "orientation": "horizontal",
+    "modules": [
+      "power-profiles-daemon",
+      "hyprland/workspaces",
+      "hyprland/window",
+      "mpris"
+    ]
+  },
+
+  "power-profiles-daemon": {
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    },
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "persistent-workspaces": { "*": 5 },
+    "format-icons": {
+      "active": "",
+      "default": ""
+    },
+    "tooltip": false
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "^$": "desktop"
+    },
+    "tooltip": false
+  },
+
+  "mpris": {
+    "format": "{dynamic}",
+    "dynamic-order": ["artist", "title"],
+    "max-length": 40,
+    "tooltip": false
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "group/right": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "custom/separator",
+      "bluetooth",
+      "custom/separator",
+      "cpu",
+      "custom/separator",
+      "memory",
+      "custom/separator",
+      "backlight",
+      "custom/separator",
+      "pulseaudio",
+      "custom/separator",
+      "battery",
+      "custom/separator",
+      "idle_inhibitor",
+      "custom/separator",
+      "group/screenshot",
+      "custom/separator",
+      "group/power"
+    ]
+  },
+
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/lockscreen",
+      "custom/shutdown",
+      "custom/separator",
+      "custom/reboot",
+      "custom/separator",
+      "custom/logout",
+      "custom/separator"
+    ]
+  },
+
+  "group/screenshot": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/ssregion",
+      "custom/ssoutput",
+      "custom/separator",
+      "custom/sswindow",
+      "custom/separator"
+    ]
+  },
+
+"network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "",
+    "format-linked": "󰌚",
+    "format-disconnected": "",
+    "format-disabled": "󰪎",
+    "on-click": "nmcli radio wifi on",
+    "on-click-right": "nmcli radio wifi off",
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-connected": "{device_alias}",
+    "on-click": "bluetoothctl power on", 
+    "on-click-right": "bluetoothctl power off", 
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "{usage}",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": "{percentage}",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip": false
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}",
+    "scroll-step": 5,
+    "max-volume": 100,
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "{capacity}",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": false
+  },
+
+  "custom/ssregion": {
+    "format": "󰄀",
+    "on-click": "hyprshot -m region -f \"$(date +'%H%M%S').png\"",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/sswindow": {
+    "format": "",
+    "on-click": "hyprshot -m window -f \"$(date +'%H%M%S').png\"",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/ssoutput": {
+    "format": "",
+    "on-click": "hyprshot -m output -f \"$(date +'%H%M%S').png\"",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/shutdown": {
+    "format": "⏻",
+    "on-click": "systemctl poweroff",
+    "tooltip": false
+  },
+
+  "custom/reboot": {
+    "format": "",
+    "on-click": "systemctl reboot",
+    "tooltip": false
+  },
+
+  "custom/lockscreen": {
+    "format": "",
+    "on-click": "hyprlock",
+    "tooltip": false
+  },
+      
+  "custom/logout": {
+    "format": "",
+    "on-click": "hyprctl dispatch exit",
+    "tooltip": false
+  },
+
+  "custom/separator": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  }
+}

@@ -15,6 +15,8 @@ alias grep="grep --color=auto"
 
 py() { python3 $1.py; }
 
+mkcd() { [ -n "$1" ] && mkdir -p "$1" && cd "$1"; }
+
 run() { [ -n "$1" ] && [ -d ~/.nerd/"$1" ] && npm --prefix ~/.nerd/"$1" run dev || echo "Error: Directory Not Found"; }
 
 vite() { [ -n "$1" ] && npx create-vite@latest "$1" --template react-ts; }
@@ -27,4 +29,4 @@ code() {
   popd > /dev/null
 }
 
-PS1='\n\[\e[0;1;37m\]⏽ \t  \u  \h :  \W $(b=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null) && echo "  $b ")\n \[\e[32m\] \[\e[0m\]'
+PS1='\n\[\e[0;1;37m\]⏽ \t 󰊠 \u  \h :  \W $(b=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null) && echo "  $b ")\n⏽ \[\e[32m\] \[\e[0m\]'

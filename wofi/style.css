@@ -1,0 +1,34 @@
+* {
+  color: #d8cab8;
+  background: transparent;
+  font-family: "FiraCode Nerd Font", sans-serif;
+}
+
+#window {
+  background-color: alpha(#1a1b26, 0.75);
+  border: 2px solid #d8cab8;
+  border-radius: 8px;
+}
+
+#input {
+  border: none;
+  margin: 8px 12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #d8cab8;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#input > image {
+  margin-right: 12px;
+}
+
+#entry {
+  padding: 8px 12px;
+  margin: 0 12px 8px;
+}
+
+#entry:selected {
+  outline: none;
+  font-weight: bold;
+}
